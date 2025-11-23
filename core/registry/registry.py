@@ -9,7 +9,11 @@ class _Registry():
         return True
     
     def __str__(self):
-        return f'Registry({len(self.models)} modules): {str(self.models)}'
+        to_ret = f'Registry ({len(self.models)} modules):\n' + "{\n"
+        for record in self.models:
+            to_ret += f'\t{record}: {self.models.get(record)}\n'
+        to_ret += "}"
+        return to_ret
 
 
 registry = _Registry()
