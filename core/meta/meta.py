@@ -19,5 +19,5 @@ class MetaClass(type):
         if registry.models.get(_name):
             raise ValueError(f'Duplicated module: {_name}')
         
-        registry.register(_name, new_cls, filepath=attrs.get("__file__"))
+        registry.register(new_cls)
         return new_cls

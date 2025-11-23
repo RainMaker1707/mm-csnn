@@ -2,14 +2,10 @@ class _Registry():
     def __init__(self):
         self.models = {}
 
-    def register(self, name, cls, filepath=None):
-        if self.models.get(name):
-            raise ValueError("Registry is a set, duplicated entry: " + name)
-        self.models[name] = {
-            "cls": cls,
-            "module": cls.__module__,
-            "filepath": filepath or "unknown"
-        }
+    def register(self, cls):
+        if self.models.get(cls._name):
+            raise ValueError("Registry is a set, duplicated entry: " + cls._name)
+        self.models[cls._name] = cls
         return True
     
     def __str__(self):
