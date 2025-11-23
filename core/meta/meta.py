@@ -3,7 +3,6 @@ from core.registry.registry import registry
 
 class MetaClass(type):
     def __new__(self, name, bases, attrs):
-        print("META TEST: " + name)
         new_cls = super().__new__(self, name, bases, attrs)
         if name == "Module":
             return new_cls
@@ -21,5 +20,4 @@ class MetaClass(type):
             raise ValueError(f'Duplicated module: {_name}')
         
         registry.register(_name, new_cls, filepath=attrs.get("__file__"))
-        print(f'Module {_name} registered')
         return new_cls
