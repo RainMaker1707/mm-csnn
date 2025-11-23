@@ -7,5 +7,3 @@ if __name__ == "__main__":
     for i in range(10):
         test_n = TestNeuron()
     print(registry)
-    print(registry.models.get('test.model')._neurons)
-    print(registry.models.get('test.model.2')._neurons)
