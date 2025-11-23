@@ -26,3 +26,9 @@ class Neuron(metaclass=meta.NeuronMeta):
 
     def remove_output(self, output):
         self.synapse.remove(output)
+    
+    def spike_in(self, neuron, delay):
+        pass
+
+    def spike_out(self, delay):
+        self.synapse.spike(delay)

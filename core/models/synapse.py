@@ -19,3 +19,7 @@ class Synapse():
         if not neuron in self.neurons:
             raise ValueError(f'Neuron id: {neuron.id} cannot be removed because it is not connected to the synapse')
         self.neurons.remove(neuron)
+
+    def spike(self, delay):
+        for neuron in self.neurons:
+            neuron.spike_in(self.parent, delay)
