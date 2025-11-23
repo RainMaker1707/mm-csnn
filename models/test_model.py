@@ -17,4 +17,4 @@ class TestNotRegistered(module.Module):
 
 class TestAbstractClass(module.Module):
     _name = "test.abstract.class"
-    _abstract = False
+    _abstract = True
