@@ -3,6 +3,8 @@ MM-cSNN: Multi-Modular - continuous-time Spike Neural Network
 
 The idea behind cSNN is to stick to the biological evolution of brains. Brains use continuous spike to transfer and treat information and data through neural connection. Neurons are for most binary and only spike to all their output neighbor if some threshold is trespassed in their input neighbor.
 
+[![Documentation](https://img.shields.io/badge/Documentation-Notion-blue?style=flat-square)](https://www.notion.so/MM-cSNN-2b543670c45a80d58548c3e48f4c6e48?source=copy_link)
+
 
 ## Registry
 The registry is a singleton that keep trace of each modules and neurons types (not the instanced objects) into two separated dictionaries.
